@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Food</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/aboutstyle.css">
+</head>
+
+<body class="bg-light-theme">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Food World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Food</a></li>
+            <li class="nav-item"><a class="nav-link" href="art.html">The Art of Cooking</a></li>
+            <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div id="authButtons">
+            <a href="login.html" class="btn btn-outline-primary ml-2">Login</a>
+            <a href="signup.html" class="btn btn-outline-success ml-2">Sign Up</a>
+        </div>
+        <a href="profile.html" id="profileButton" class="btn btn-outline-info ml-2 d-none">Profile</a>
+        <button id="logoutButton" class="btn btn-outline-danger ml-2 d-none">Logout</button>
+        <button id="themeToggleButton" class="btn btn-outline-secondary ml-2">Dark Mode</button>
+    </div>
+</nav>
+
+<main class="container mt-5">
+    <section class="row mb-5">
+        <div class="col-lg-12">
+            <h2>The Cultural and Historical Significance of Food</h2>
+            <p>Food is much more than sustenance – it is a powerful cultural symbol and plays a central role in shaping the traditions, customs, and identity of every society. Throughout history, food has served as a bridge between civilizations, influencing not just the diets but also the political and social structures of entire regions.</p>
+        </div>
+        <div class="col-lg-6">
+            <h3>The History of Food</h3>
+            <figure>
+                <img src="../Images/history.jpg" class="img-fluid" alt="History of Food">
+            </figure>
+            <p>From the days of hunters and gatherers to the agricultural revolution, food has been pivotal in human development. The domestication of crops and livestock enabled early societies to settle in one place and form communities. Over time, food became a currency, a symbol of wealth, and a means of power and control in many ancient civilizations.</p>
+        </div>
+        <div class="col-lg-6">
+            <h3>Food and Culture</h3>
+            <p>Across the globe, food has become a reflection of cultural values and traditions. For example, in Italy, food is an expression of family and community meals are meant to be enjoyed together. In Japan, food preparation is considered an art form, with careful attention to presentation and balance of flavors. In Mexico, spices and bold flavors dominate, reflecting the country’s vibrant and passionate culture.</p>
+            <figure>
+                <img src="../Images/cultural.jpg" class="img-fluid" alt="Cultural Significance of Food">
+                <figcaption class="text-center mt-2">A diverse array of dishes from around the world, each with unique cultural significance.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="row">
+        <div class="col-lg-12">
+            <h2>The Evolution of Food in Society</h2>
+        </div>
+        <div class="col-lg-6">
+            <figure>
+                <img src="../Images/evolution.jpg" class="img-fluid" alt="Evolution of Food">
+            </figure>
+            <p>In the modern world, food has evolved beyond its nutritional value. It has become a focal point for social interactions, economic transactions, and even environmental discussions. Today, the focus is increasingly on sustainability, organic farming, and reducing food waste.</p>
+        </div>
+        <div class="col-lg-6">
+            <h3>Global Food Movements</h3>
+            <ul>
+                <li><strong>Farm-to-table:</strong> Promoting locally sourced, organic ingredients to support local farmers and reduce environmental impact.</li>
+                <li><strong>Plant-based diets:</strong> Emphasizing the health and environmental benefits of plant-based eating, including vegan and vegetarian diets.</li>
+                <li><strong>Sustainable food systems:</strong> Addressing the need for food production methods that are environmentally friendly and socially equitable.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="accordion-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAnswer(this)">What is the importance of food in culture?</div>
+            <div class="accordion-content">Food plays a vital role in cultural identity, representing heritage, traditions, and values that vary across different regions and communities.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAnswer(this)">How has food evolved over time?</div>
+            <div class="accordion-content">Food has evolved from being a survival necessity to a form of art, with a focus on sustainability and innovation in modern cuisine.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header" onclick="toggleAnswer(this)">What are the health benefits of a balanced diet?</div>
+            <div class="accordion-content">A balanced diet provides essential nutrients, supports physical well-being, and reduces the risk of chronic diseases.</div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div id="dateTimeDisplay" class="mb-4"></div>
+    <p><strong>Created by E.Dulat and S.Adilkhan</strong></p>
+</footer>
+<script src="../scripts/displayDateTime.js"></script>
+<script src="../scripts/newscript.js"></script>
+<script src="../scripts/keyhandler.js"></script>
+<script src="../scripts/login.js"></script>
+<script src="../scripts/session.js"></script>
+<script src="../scripts/theme.js"></script>
+<script src="../scripts/signup.js"></script>
+</body>
+</html>

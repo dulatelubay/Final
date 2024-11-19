@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav a {
+    color: #ffeb3b;
+    margin: 0 15px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #ff6347;
+}
+
+main {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ff6347;
+    padding-bottom: 5px;
+}
+
+.cooking-technique img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+    font-style: italic;
+    color: #666;
+}
+
+.btn-custom {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #ff4500;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
+.dark-theme .card {
+    background-color: #444;
+    color: white;
+}
+
+.carousel-item img {
+    max-height: 1000px;
+    object-fit: cover;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease forwards;
+}
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+    color: #333;
+}
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+#dateTimeDisplay {
+    font-weight: bold;
+    color: #ffa07a;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+

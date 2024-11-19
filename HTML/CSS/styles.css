@@ -1,0 +1,25 @@
+body.light-mode {
+    background-color: #ffffff;
+    color: #333333;
+}
+body.dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.star {
+    cursor: pointer;
+    font-size: 24px;
+    color: lightgray;
+}
+.star.selected {
+    color: gold;
+}
+#nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+#rating, #greeting-section, #current-time {
+    margin: 20px 0;
+}

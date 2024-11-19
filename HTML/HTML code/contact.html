@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/contactstyle.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Food World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Food</a></li>
+            <li class="nav-item"><a class="nav-link" href="art.html">The Art of Cooking</a></li>
+            <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div id="authButtons">
+            <a href="login.html" class="btn btn-outline-primary ml-2">Login</a>
+            <a href="signup.html" class="btn btn-outline-success ml-2">Sign Up</a>
+        </div>
+        <a href="profile.html" id="profileButton" class="btn btn-outline-info ml-2 d-none">Profile</a>
+        <button id="logoutButton" class="btn btn-outline-danger ml-2 d-none">Logout</button>
+        <button id="themeToggleButton" class="btn btn-outline-secondary ml-2">Dark Mode</button>
+    </div>
+</nav>
+<main class="container main-content">
+    <section class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <h2 class="text-center mb-4">Get in Touch</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                    <div class="error" id="nameError">Please enter your name.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                    <div class="error" id="emailError">Please enter a valid email address.</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+                    <div class="error" id="messageError">Please enter a message.</div>
+                </div>
+
+                <button type="submit" class="btn btn-custom btn-block">Submit</button>
+                <div id="successMessage" class="success-message">Your message has been sent successfully!</div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="text-center p-4 bg-dark text-white">
+    <div id="dateTimeDisplay" class="text-center mb-4"></div>
+    <p><strong>Created by E.Dulat and S.Adilkhan</strong></p>
+</footer>
+
+<script src="../scripts/contactjs.js"></script>
+<script src="../scripts/keyhandler.js"></script>
+<script src="../scripts/session.js"></script>
+<script src="../scripts/theme.js"></script>
+<script src="../scripts/signup.js"></script>
+</body>
+
+</html>

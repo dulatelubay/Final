@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/recipestyle.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Food World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Food</a></li>
+            <li class="nav-item"><a class="nav-link" href="art.html">The Art of Cooking</a></li>
+            <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div id="authButtons">
+            <a href="login.html" class="btn btn-outline-primary ml-2">Login</a>
+            <a href="signup.html" class="btn btn-outline-success ml-2">Sign Up</a>
+        </div>
+        <a href="profile.html" id="profileButton" class="btn btn-outline-info ml-2 d-none">Profile</a>
+        <button id="logoutButton" class="btn btn-outline-danger ml-2 d-none">Logout</button>
+        <button id="themeToggleButton" class="btn btn-outline-secondary ml-2">Dark Mode</button>
+    </div>
+</nav>
+<main class="container mt-5 main-content">
+    <section class="text-center mb-5">
+        <h2>Our Favorite Recipes</h2>
+        <p>Here are some recipes to try out at home. They are easy to make and perfect for any occasion:</p>
+        <input type="text" id="searchInput" class="form-control mt-3" placeholder="Search for a recipe or ingredient...">
+    </section>
+
+    <section id="recipe-list" class="row">
+    </section>
+
+</main>
+
+<footer class="bg-dark text-white text-center py-4 mt-5">
+    <div id="dateTimeDisplay" class="mb-4"></div>
+    <p><strong>Created by E.Dulat and S.Adilkhan</strong></p>
+</footer>
+
+<script src="../scripts/displayDateTime.js"></script>
+<script src="../scripts/displayRecipes.js"></script>
+<script src="../scripts/session.js"></script>
+<script src="../scripts/theme.js"></script>
+<script src="../scripts/signup.js"></script>
+</body>
+
+</html>
