@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Art of Cooking</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="artstyles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Food World</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Food</a></li>
+            <li class="nav-item"><a class="nav-link active" href="art.html">The Art of Cooking</a></li>
+            <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="btns d-grid gap-3">
+            <div id="authButtons">
+                <a href="login.html" class="btn btn-outline-primary ml-2">Login</a>
+                <a href="signup.html" class="btn btn-outline-success ml-2">Sign Up</a>
+            </div>
+            <a href="profile.html" id="profileButton" class="btn btn-outline-info ml-2 d-none">Profile</a>
+            <button id="logoutButton" class="btn btn-outline-danger ml-2 d-none">Logout</button>
+            <button id="themeToggleButton" class="btn btn-theme-toggle">Dark Mode</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main class="container mt-5">
+    <!-- Intro Section -->
+    <section class="row text-center">
+        <div class="col-lg-12">
+            <h1 class="section-title">Cooking: A Blend of Art and Science</h1>
+            <p class="section-description">
+                Cooking is more than a necessity — it's a creative process that blends technical skills with artistic flair.
+            </p>
+        </div>
+    </section>
+
+    <!-- Cooking Techniques Section -->
+    <section class="row mt-5 cooking-techniques">
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <img src="Grilling.jpg" class="img-fluid rounded shadow" alt="Grilling Technique">
+                <div class="card-body">
+                    <h5 class="card-title">Grilling</h5>
+                    <p class="card-text">
+                        Adds a smoky flavor and crispy texture to meats and vegetables, enhancing their natural flavors.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <img src="baking.jpg" class="img-fluid rounded shadow" alt="Baking Technique">
+                <div class="card-body">
+                    <h5 class="card-title">Baking</h5>
+                    <p class="card-text">
+                        Used for creating breads, pastries, and cakes, allowing for precision and creativity in the kitchen.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <img src="sautening.jpg" class="img-fluid rounded shadow" alt="Sautéing Technique">
+                <div class="card-body">
+                    <h5 class="card-title">Sautéing</h5>
+                    <p class="card-text">
+                        A quick method to cook ingredients while preserving their flavor and texture, perfect for vegetables and meats.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <img src="poaching1.jpg" class="img-fluid rounded shadow" alt="Poaching Technique">
+                <div class="card-body">
+                    <h5 class="card-title">Poaching</h5>
+                    <p class="card-text">
+                        A gentle cooking technique ideal for delicate foods like eggs and fish, maintaining their structure and nutrients.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creativity in Cooking -->
+    <section class="row mt-5">
+        <div class="col-lg-6">
+            <h2>Creativity in Cooking</h2>
+            <p>
+                In cooking, creativity knows no bounds. Experiment with flavors, textures, and presentation to make each dish unique and unforgettable.
+            </p>
+        </div>
+        <div id="carouselExampleIndicators" class="carousel slide col-lg-6" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active"><img class="d-block w-100" src="creativecooking.jpg" alt="First slide"></div>
+                <div class="carousel-item"><img class="d-block w-100" src="creativecooking2.jpg" alt="Second slide"></div>
+                <div class="carousel-item"><img class="d-block w-100" src="creativecooking3.jpg" alt="Third slide"></div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </section>
+</main>
+
+<!-- Footer -->
+<footer class="text-center p-4 bg-white text-dark">
+    <div id="dateTimeDisplay" class="mb-4" style="font-size: 1.2rem;">Wednesday, November 20, 2024 at 07:00:16 AM</div>
+    <p style="font-size: 1.1rem;"><strong>Created by E.Dulat and S.Adilkhan</strong></p>
+</footer>
+
+
+<script src="displayDateTime.js"></script>
+<script src="popup.js"></script>
+<script src="session.js"></script>
+<script src="keyhandler.js"></script>
+<script src="theme.js"></script>
+<script src="signup.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
