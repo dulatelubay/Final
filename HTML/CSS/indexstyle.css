@@ -1,142 +1,186 @@
-.navbar-nav .nav-link {
-    font-size: 0.9rem;
-}
-
-.navbar-brand {
-    font-size: 1.1rem;
-}
-
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px;
-    width: 100%;
-}
-
-.close-button {
-    background: #ff6347;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-}
-
-.close-button:hover {
-    background: #ff4500;
-}
-
-.subscribe-button,
-.play-sound-button {
-    background-color: #ffa07a;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.subscribe-button:hover,
-.play-sound-button:hover {
-    background-color: #ff6347;
-}
-
-.success-message {
-    color: green;
-    font-weight: bold;
-    display: none;
-    margin-top: 10px;
-}
-.rating-stars span {
-    font-size: 2rem;
-    cursor: pointer;
-    color: grey;
-}
-.rating-stars .selected {
-    color: gold;
-}
-body.light-theme {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-.navbar-light .navbar-brand,
-.navbar-light .navbar-nav .nav-link {
-    color: #333;
+/* Базовые стили для body */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa; /* Светлая тема по умолчанию */
+    color: #333; /* Тёмный текст по умолчанию */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.dark-theme {
-    background-color: #333333;
-    color: #ffffff;
+    background-color: #222; /* Тёмная тема */
+    color: #f0f0f0; /* Светлый текст */
 }
 
-.dark-theme .card {
-    background-color: #444;
-    color: white;
+/* Основной контент */
+main {
+    flex: 1;
 }
 
-.navbar-light .navbar-brand,
-.navbar-light .navbar-nav .nav-link {
-    color: #ccc;
+/* Навигационная панель */
+.navbar {
+    background-color: #ffffff; /* Фон для светлой темы */
+    color: #333; /* Тёмный текст для светлой темы */
+    border-bottom: 1px solid #ddd; /* Чёткая граница снизу */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-.btn-outline-secondary {
-    color: #ffffff;
-    border-color: #ffffff;
+
+body.dark-theme .navbar {
+    background-color: #333; /* Фон для тёмной темы */
+    color: rgba(0, 0, 0, 0.6); /* Светлый текст для тёмной темы */
+    border-bottom: 1px solid #444; /* Чёткая граница в тёмной теме */
 }
-.btn-outline-secondary:hover {
-    background-color: #ffffff;
-    color: #333333;
+
+/* Ссылки в навбаре */
+.navbar .nav-link {
+    color: rgba(0, 0, 0, 0.6); /* Тёмные ссылки в светлой теме */
+    font-size: 1.1rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
 }
-#themeToggleButton {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
+
+body.dark-theme .navbar .nav-link {
+    color: rgba(0, 0, 0, 0.6); /* Светлые ссылки в тёмной теме */
+}
+
+.navbar .nav-link.active {
     font-weight: bold;
+    color: #333; /* Активная ссылка в светлой теме */
+}
+
+body.dark-theme .navbar .nav-link.active {
+    color: #fff; /* Активная ссылка в тёмной теме */
+}
+
+.navbar .nav-link:hover {
+    color: #000; /* Цвет при наведении в светлой теме */
+}
+
+body.dark-theme .navbar .nav-link:hover {
+    color: #000000; /* Цвет при наведении в тёмной теме */
+}
+
+/* Текст приветствия в навбаре */
+.navbar .navbar-text {
+    color: rgba(0, 0, 0, 0.6); /* Цвет приветствия в светлой теме */
+}
+
+body.dark-theme .navbar .navbar-text {
+    color: rgba(0, 0, 0, 0.6); /* Цвет приветствия в тёмной теме */
+}
+
+/* Кнопки в навбаре */
+#themeToggleButton,
+#logoutButton,
+#profileButton {
+    background-color: #333; /* Тёмный фон кнопок */
+    color: #fff; /* Светлый текст кнопок */
+    padding: 8px 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#themeToggleButton:hover {
-    background-color: #0056b3;
-}
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    box-sizing: border-box;
+#themeToggleButton:hover,
+#logoutButton:hover,
+#profileButton:hover {
+    background-color: #555; /* Более светлый тёмный при наведении */
 }
 
-#dateTimeDisplay {
+body.dark-theme #themeToggleButton,
+body.dark-theme #logoutButton,
+body.dark-theme #profileButton {
+    background-color: #f0f0f0; /* Светлый фон кнопок в тёмной теме */
+    color: #333; /* Тёмный текст кнопок в тёмной теме */
+}
+
+body.dark-theme #themeToggleButton:hover,
+body.dark-theme #logoutButton:hover,
+body.dark-theme #profileButton:hover {
+    background-color: #ddd; /* Более тёмный светлый при наведении */
+}
+
+/* Основная секция */
+.text-content h1 {
+    font-size: 2.5rem;
+    color: inherit; /* Наследует цвет текста от темы */
     font-weight: bold;
-    color: #ffa07a;
-    font-size: 1.1em;
-    margin-bottom: 5px;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: inherit; /* Наследует цвет текста от темы */
+}
+
+.text-content .btn-primary {
+    background-color: #333; /* Тёмный фон кнопки */
+    color: #fff; /* Светлый текст */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.text-content .btn-primary:hover {
+    background-color: #555; /* Более светлый тёмный при наведении */
+    transform: translateY(-2px);
+}
+
+body.dark-theme .btn-primary {
+    background-color: #f0f0f0; /* Светлый фон кнопки в тёмной теме */
+    color: #333; /* Тёмный текст кнопки в тёмной теме */
+}
+
+body.dark-theme .btn-primary:hover {
+    background-color: #ddd; /* Более тёмный светлый при наведении */
+}
+
+/* Карточки Cuisine */
+.cuisine-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: #fff; /* Светлый фон карточек */
+    color: #333; /* Тёмный текст карточек */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme .cuisine-card {
+    background-color: #444; /* Тёмный фон карточек в тёмной теме */
+    color: #f0f0f0; /* Светлый текст карточек в тёмной теме */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cuisine-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Футер */
+footer {
+    background-color: #ffffff; /* Белый фон */
+    color: #333333; /* Черный текст */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.1rem;
+    border-top: 1px solid #ddd;
 }
 
 footer p {
     margin: 0;
-    font-size: 1em;
+    font-size: 1.1rem;
+    color: #333333;
+}
+
+body.dark-theme footer {
+    background-color: #222; /* Темный фон для темной темы */
+    color: #ffffff; /* Белый текст для темной темы */
+    border-top: 1px solid #444;
 }

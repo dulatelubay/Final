@@ -6,6 +6,7 @@
     <title>Food World - Welcome</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/indexstyle.css">
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.png">
 </head>
 <body>
 <!-- Navigation Bar -->
@@ -15,14 +16,13 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="about.html">About Food</a></li>
             <li class="nav-item"><a class="nav-link" href="art.html">The Art of Cooking</a></li>
             <li class="nav-item"><a class="nav-link" href="recipes.html">Recipes</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
         </ul>
-        <!-- Приветствие и кнопки авторизации -->
         <span id="greetingMessage" class="navbar-text mr-3"></span>
         <div id="authButtons">
             <a href="login.html" class="btn btn-outline-primary ml-2">Login</a>
@@ -33,23 +33,25 @@
         <button id="themeToggleButton" class="btn btn-outline-secondary ml-2">Dark Mode</button>
     </div>
 </nav>
+
 <!-- Main Content -->
 <main class="container mt-5">
-    <!-- Intro Section -->
-    <section class="row">
-        <div class="col-lg-6">
-            <h2>Explore the Best Food Across the Globe</h2>
-            <p>Food is not just sustenance; it is an art form that crosses cultures, generations, and traditions.</p>
+    <!-- Main Section -->
+    <section class="row align-items-center">
+        <div class="col-lg-6 text-content">
+            <h1 class="display-4 font-weight-bold mb-3">Explore the Best Food Across the Globe</h1>
+            <p class="lead text-muted">Food is not just sustenance, it is an art form that crosses cultures, generations, and traditions. Discover the flavors of the world with us.</p>
+            <a href="recipes.html" class="btn btn-primary btn-lg mt-3">Discover Recipes</a>
         </div>
         <div class="col-lg-6 text-center">
-            <img src="../Images/worldfood1.jpg" alt="World Food" class="img-fluid" width="350">
+            <img src="../Images/dishcuisine.jpg" alt="World Cuisine" class="img-fluid rounded shadow">
         </div>
     </section>
 
     <!-- Cuisine Cards -->
     <section class="row mt-5">
         <div class="col-lg-4">
-            <div class="card">
+            <div class="card cuisine-card">
                 <img src="../Images/Italian.jpg" class="card-img-top" alt="Italian Cuisine">
                 <div class="card-body">
                     <h5 class="card-title">Italian Cuisine</h5>
@@ -58,7 +60,7 @@
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="card">
+            <div class="card cuisine-card">
                 <img src="../Images/Japanese.jpg" class="card-img-top" alt="Japanese Cuisine">
                 <div class="card-body">
                     <h5 class="card-title">Japanese Cuisine</h5>
@@ -67,7 +69,7 @@
             </div>
         </div>
         <div class="col-lg-4">
-            <div class="card">
+            <div class="card cuisine-card">
                 <img src="../Images/Mexican.jpg" class="card-img-top" alt="Mexican Cuisine">
                 <div class="card-body">
                     <h5 class="card-title">Mexican Cuisine</h5>
@@ -76,37 +78,12 @@
             </div>
         </div>
     </section>
-
-    <!-- Subscribe Section -->
-    <div class="text-center mt-5">
-        <button class="subscribe-button btn btn-primary">Subscribe</button>
-    </div>
-
-    <!-- Subscription Modal -->
-    <div id="modalOverlay" class="modal-overlay">
-        <div class="modal-content">
-            <button class="close-button">&times;</button>
-            <h3>Subscribe to Our Newsletter</h3>
-            <form id="subscribeForm">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email address:</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <div id="successMessage" class="success-message">Thank you for subscribing!</div>
-            </form>
-        </div>
-    </div>
 </main>
 
 <!-- Footer -->
-<footer class="text-center p-4 bg-dark text-white">
-    <div id="dateTimeDisplay" class="mb-4"></div>
-    <p><strong>Created by E.Dulat and S.Adilkhan</strong></p>
+<footer class="text-center p-4 bg-white text-dark">
+    <div id="dateTimeDisplay" class="mb-4" style="font-size: 1.2rem;">Wednesday, November 20, 2024 at 04:47:08 AM</div>
+    <p style="font-size: 1.1rem;"><strong>Created by E.Dulat and S.Adilkhan</strong></p>
 </footer>
 
 <!-- Scripts -->
@@ -118,5 +95,9 @@
 <script src="../scripts/session.js"></script>
 <script src="../scripts/theme.js"></script>
 <script src="../scripts/signup.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

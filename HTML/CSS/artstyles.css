@@ -1,134 +1,185 @@
+/* General */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-header {
-    background-color: #444;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.nav a {
-    color: #ffeb3b;
-    margin: 0 15px;
-    font-size: 1.2em;
-    transition: color 0.3s;
-}
-
-.nav a:hover {
-    color: #ff6347;
-}
-
-main {
-    padding: 40px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.section-content h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #ff6347;
-    padding-bottom: 5px;
-}
-
-.cooking-technique img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-figcaption {
-    font-style: italic;
-    color: #666;
-}
-
-.btn-custom {
-    background-color: #ff6347;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.btn-custom:hover {
-    background-color: #ff4500;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-}
-
-.dark-theme {
-    background-color: #333;
-    color: white;
-}
-
-.dark-theme .card {
-    background-color: #444;
-    color: white;
-}
-
-.carousel-item img {
-    max-height: 1000px;
-    object-fit: cover;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.slide-in {
-    animation: slideIn 0.5s ease forwards;
-}
-
+/* Themes */
 body.light-theme {
     background-color: #ffffff;
+    color: #333333;
+}
+
+body.dark-theme {
+    background-color: #222222;
+    color: #f0f0f0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    color: #333333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 1px solid #ddd;
+}
+
+body.dark-theme .navbar {
+    background-color: #333333;
+    color: #f0f0f0;
+    border-bottom: 1px solid #444;
+}
+
+.navbar .nav-link {
+    color: #555555;
+    margin-right: 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .navbar .nav-link {
+    color: #cccccc;
+}
+
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+body.dark-theme .navbar .nav-link.active {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-link:hover {
     color: #000000;
 }
 
-.navbar-light .navbar-brand,
-.navbar-light .navbar-nav .nav-link {
-    color: #333;
-}
-footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    box-sizing: border-box;
+body.dark-theme .navbar .nav-link:hover {
+    color: #ffffff;
 }
 
-#dateTimeDisplay {
-    font-weight: bold;
-    color: #ffa07a;
-    font-size: 1.1em;
-    margin-bottom: 5px;
+/* Buttons */
+.btn-theme-toggle {
+    background-color: #333333;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme .btn-theme-toggle {
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+.btn-theme-toggle:hover {
+    background-color: #555555;
+}
+#themeToggleButton,
+#logoutButton,
+#profileButton {
+    background-color: #333; /* Тёмный фон кнопок */
+    color: #fff; /* Светлый текст кнопок */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#themeToggleButton:hover,
+#logoutButton:hover,
+#profileButton:hover {
+    background-color: #555; /* Более светлый тёмный при наведении */
+}
+
+body.dark-theme #themeToggleButton,
+body.dark-theme #logoutButton,
+body.dark-theme #profileButton {
+    background-color: #f0f0f0; /* Светлый фон кнопок в тёмной теме */
+    color: #333; /* Тёмный текст кнопок в тёмной теме */
+}
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #333333;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme footer {
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.76);
+    border-top: 1px solid #444;
 }
 
 footer p {
     margin: 0;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
+
+/* Images */
+.img-fluid {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: inherit;
+}
+
+.section-description {
+    font-size: 1.2rem;
+    text-align: center;
+    color: inherit;
+}
+
+/* Cards */
+.card {
+    background-color: #ffffff;
+    color: #333333;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme .card {
+    background-color: #444444;
+    color: #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Carousel */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+}

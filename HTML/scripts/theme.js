@@ -1,17 +1,24 @@
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggleButton = document.getElementById("themeToggleButton");
-    const currentTheme = localStorage.getItem("theme") || "light";
+    const body = document.body;
 
-    function applyTheme(theme) {
-        document.body.className = theme === "dark" ? "dark-theme" : "light-theme";
-        themeToggleButton.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
-        localStorage.setItem("theme", theme); // Save the theme in localStorage
+    // Проверка сохранённой темы
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+        body.classList.add("dark-theme");
+        themeToggleButton.textContent = "Light Mode";
     }
 
-    applyTheme(currentTheme);
-
+    // Переключение темы
     themeToggleButton.addEventListener("click", () => {
-        const newTheme = document.body.classList.contains("dark-theme") ? "light" : "dark";
-        applyTheme(newTheme);
+        if (body.classList.contains("dark-theme")) {
+            body.classList.remove("dark-theme");
+            themeToggleButton.textContent = "Dark Mode";
+            localStorage.setItem("theme", "light");
+        } else {
+            body.classList.add("dark-theme");
+            themeToggleButton.textContent = "Light Mode";
+            localStorage.setItem("theme", "dark");
+        }
     });
 });

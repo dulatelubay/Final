@@ -1,152 +1,151 @@
+/* General */
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.main-content h2, .main-content h3 {
-    font-weight: bold;
-    margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.light-theme {
     background-color: #ffffff;
-    color: #000000;
-}
-
-.navbar-light .navbar-brand,
-.navbar-light .navbar-nav .nav-link {
-    color: #333;
+    color: #333333;
 }
 
 body.dark-theme {
+    background-color: #222222;
+    color: #f0f0f0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    color: #333333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: 1px solid #ddd;
+}
+
+body.dark-theme .navbar {
     background-color: #333333;
+    color: #f0f0f0;
+    border-bottom: 1px solid #444;
+}
+
+.navbar .nav-link {
+    color: #555555;
+    margin-right: 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+body.dark-theme .navbar .nav-link {
+    color: #cccccc;
+}
+
+.navbar .nav-link.active {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+body.dark-theme .navbar .nav-link.active {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar .nav-link:hover {
+    color: #000000;
+}
+
+body.dark-theme .navbar .nav-link:hover {
     color: #ffffff;
 }
 
-.dark-theme .card {
-    background-color: #444;
-    color: white;
-}
-
-.navbar-light .navbar-brand,
-.navbar-light .navbar-nav .nav-link {
-    color: #ccc;
-}
-
-.btn-custom, .subscribe-button, .close-button {
-    background-color: #ff6347;
-    color: white;
+/* Buttons */
+.btn-theme-toggle {
+    background-color: #333333;
+    color: #ffffff;
     border: none;
     padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-theme .btn-theme-toggle {
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+.btn-theme-toggle:hover {
+    background-color: #555555;
+}
+#themeToggleButton,
+#logoutButton,
+#profileButton {
+    background-color: #333; /* Тёмный фон кнопок */
+    color: #fff; /* Светлый текст кнопок */
+    padding: 8px 16px;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 1em;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.btn-custom:hover, .subscribe-button:hover, .close-button:hover {
-    background-color: #ff4500;
+#themeToggleButton:hover,
+#logoutButton:hover,
+#profileButton:hover {
+    background-color: #555; /* Более светлый тёмный при наведении */
 }
 
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+body.dark-theme #themeToggleButton,
+body.dark-theme #logoutButton,
+body.dark-theme #profileButton {
+    background-color: #f0f0f0; /* Светлый фон кнопок в тёмной теме */
+    color: #333; /* Тёмный текст кнопок в тёмной теме */
 }
 
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 400px;
-    width: 100%;
-    text-align: center;
-}
-
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #ffffff;
+    color: #333333;
     padding: 20px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-    box-sizing: border-box;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#dateTimeDisplay {
-    font-weight: bold;
-    color: #ffa07a;
-    font-size: 1.1em;
-    margin-bottom: 5px;
+body.dark-theme footer {
+    background-color: #333333;
+    color: #f0f0f0;
+    border-top: 1px solid #444;
 }
 
 footer p {
     margin: 0;
-    font-size: 1em;
+    font-size: 1.1rem;
 }
 
-.main-content img,
-.cooking-technique img,
-.carousel-item img {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 100%;
-    max-height: 1000px;
-    object-fit: cover;
-}
-
-.success-message {
-    color: green;
+#dateTimeDisplay {
     font-weight: bold;
-    display: none;
-    margin-top: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
-.rating {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.rating input {
-    display: none;
-}
-
-.rating label {
-    font-size: 2em;
-    color: #ccc;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-.rating input:checked ~ label,
-.rating label:hover,
-.rating label:hover ~ label {
-    color: #ffa07a;
-}
-
-#themeToggleButton {
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    font-weight: bold;
+/* Recipe List */
+#recipe-list .card {
+    background-color: #ffffff;
+    color: #333333;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#themeToggleButton:hover {
-    background-color: #0056b3;
+body.dark-theme #recipe-list .card {
+    background-color: #444444;
+    color: #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#recipe-list .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
